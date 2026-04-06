@@ -61,7 +61,7 @@ WELCOME="""\U0001f33f InQ — ароматический ингалятор
 \U0001f6d2 Нажмите кнопку ниже, чтобы заказать:"""
 
 async def start(update,context):
-    kb=[[InlineKeyboardButton("\U0001f6d2 ЗАКАЗАТЬ СО СКИДКОЙ -47%",callback_data="order_start")],[InlineKeyboardButton("\U0001f33f Каталог вкусов",callback_data="catalog")],[InlineKeyboardButton("\u2753 FAQ",callback_data="faq"),InlineKeyboardButton("\U0001f4ac Написать нам",url="https://t.me/Vusso")],[InlineKeyboardButton("\U0001f310 Наш сайт",url="https://freshbar-store.netlify.app")]]
+    kb=[[InlineKeyboardButton("\U0001f6d2 ЗАКАЗАТЬ СО СКИДКОЙ -47%",callback_data="order_start")],[InlineKeyboardButton("\U0001f33f Каталог вкусов",callback_data="catalog")],[InlineKeyboardButton("\u2753 FAQ",callback_data="faq"),InlineKeyboardButton("\U0001f4ac Написать нам",url="https://t.me/Vusso")],[InlineKeyboardButton("\U0001f310 Наш сайт",url="https://inq-store.netlify.app")]]
     await update.message.reply_text(WELCOME,reply_markup=InlineKeyboardMarkup(kb))
     return ConversationHandler.END
 
@@ -92,7 +92,7 @@ async def show_contact(update,context):
 
 async def back_to_menu(update,context):
     q=update.callback_query;await q.answer()
-    kb=[[InlineKeyboardButton("\U0001f6d2 ЗАКАЗАТЬ СО СКИДКОЙ -47%",callback_data="order_start")],[InlineKeyboardButton("\U0001f33f Каталог вкусов",callback_data="catalog")],[InlineKeyboardButton("\u2753 FAQ",callback_data="faq"),InlineKeyboardButton("\U0001f4ac Контакты",callback_data="contact")],[InlineKeyboardButton("\U0001f310 Наш сайт",url="https://freshbar-store.netlify.app")]]
+    kb=[[InlineKeyboardButton("\U0001f6d2 ЗАКАЗАТЬ СО СКИДКОЙ -47%",callback_data="order_start")],[InlineKeyboardButton("\U0001f33f Каталог вкусов",callback_data="catalog")],[InlineKeyboardButton("\u2753 FAQ",callback_data="faq"),InlineKeyboardButton("\U0001f4ac Контакты",callback_data="contact")],[InlineKeyboardButton("\U0001f310 Наш сайт",url="https://inq-store.netlify.app")]]
     await q.edit_message_text("\U0001f33f InQ \u2014 ароматический ингалятор\n\n\U0001f525 Скидка 47%: 990р вместо 1890р\n\nЗамени привычку \u2014 бросай курить легко",reply_markup=InlineKeyboardMarkup(kb))
 
 async def order_start(update,context):
